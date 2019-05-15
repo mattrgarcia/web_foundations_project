@@ -33,7 +33,6 @@ const customers = data.customers;
 
 const html = `${Object.keys(customers).map( key => `<div> ${ key }</div>` ).join('')}`
 customerDiv.innerHTML = html;
-
 }
 
 renderCustomers();
@@ -50,3 +49,16 @@ const renderPrizes = () => {
 }
 
 renderPrizes();
+
+const renderPrizeList = () => {
+
+  const prizes = data.prizes;
+
+  const html = `
+  <ul>
+    ${Object.keys(prizes).map ( key => `<li> ${key}</li`).join('')}
+  </ul>
+  `;
+  console.log(html);
+}
+renderPrizeList();
