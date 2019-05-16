@@ -36,19 +36,23 @@ const prizes = Object.keys(customers);
 let prize = '';
 let arr = [];
 
-const names = prizes.forEach( (el) => {
+ prizes.forEach( (el) => {
    prize = (data.customers[el]);
 });
   for (let key in prize){
     arr.push(key);
   }
 
+const bob = `${Object.keys(customers).map( key => `<div> ${ key }</div><div> ${ data.customers[key] }</div>`).join('')}`
+
 const html = `
 ${Object.keys(customers).map( key =>
 `<div>
 ${ key }
 <ul>
-${arr.map( key => `<li><button>-</button> ${key} <button>+</button></li>`).join('')}
+<li><button>-</button> Foo ${data.customers[key].Foo} <button>+</button></li>
+<li><button>-</button> Bar ${data.customers[key].Bar} <button>+</button></li>
+<li><button>-</button> Bazz ${data.customers[key].Bazz} <button>+</button></li>
 </ul>
 </div>` ).join('')}
 `
@@ -63,7 +67,7 @@ const renderPrizes = () => {
 
   const prizes = data.prizes;
 
-  const html = `${Object.keys(prizes).map ( key => `<div> ${ key }</div>`).join('')}`
+  const html = `${Object.keys(prizes).map( key => `<div> ${ key }</div><div> ${ data.prizes[key] }</div>`).join('')}`
 
   prizeDiv.innerHTML = html;
 }
