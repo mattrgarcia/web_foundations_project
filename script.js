@@ -31,7 +31,27 @@ const customerDiv = document.querySelector('#customers');
 
 const customers = data.customers;
 
-const html = `${Object.keys(customers).map( key => `<div> ${ key }</div>` ).join('')}`
+const prizes = Object.keys(customers);
+
+let prize = '';
+let arr = [];
+
+const names = prizes.forEach( (el) => {
+   prize = (data.customers[el]);
+});
+  for (let key in prize){
+    arr.push(key);
+  }
+
+const html = `
+${Object.keys(customers).map( key =>
+`<div>
+${ key }
+<ul>
+${arr.map( key => `<li><button>-</button> ${key} <button>+</button></li>`).join('')}
+</ul>
+</div>` ).join('')}
+`
 customerDiv.innerHTML = html;
 }
 
@@ -50,15 +70,3 @@ const renderPrizes = () => {
 
 renderPrizes();
 
-const renderPrizeList = () => {
-
-  const prizes = data.prizes;
-
-  const html = `
-  <ul>
-    ${Object.keys(prizes).map ( key => `<li> ${key}</li`).join('')}
-  </ul>
-  `;
-  console.log(html);
-}
-renderPrizeList();

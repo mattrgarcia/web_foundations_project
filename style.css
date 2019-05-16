@@ -1,4 +1,25 @@
-div {
+h1{
   display: flex;
   flex: 1;
+  justify-content: center;
 }
+#prizes {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+#customers {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+
