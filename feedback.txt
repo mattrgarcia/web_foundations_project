@@ -1,0 +1,33 @@
+## Grading Rubric
+
+# Final Score:  5.5 / 15 points
+
+### ui displaying state 2 / 4 pts
+- some data displayed properly 2 / 2 pt
+- all data displayed properly 0 / 2 pt
+### css 1 / 2 pts
+- ui has styles applied 1 / 1 pt
+- ui is mobile friendly 0 / 1 pt
+### event handlers 0 / 3 pts
+- event handlers being captured 0 / 1 pt
+- is state being changed 0 / 1 pt
+- is the state being re-rendered properly 0 / 1 pt
+### edge cases 0 / 2 pts
+- prevent a user from decrementing if they have no prizes 0 / 1 pt
+- prevent a user from incrementing if there are none left 0 / 1 pt
+### code style 2.5 / 4 pts
+- proper indentation 0 / 0.5 pts
+- semicolons 0.5 / 0.5 pts
+- proper use of let and const 0.5 / 0.5 pts
+- consistent use of arrow and/or functions 0.5 / 0.5 pts
+- code complexity 1 / 2 pts
+
+Notes: 
+
+Looks like a great start! Didn't see that any event listners were added, or that anything was updated, or being displayed.
+
+You would need to add an Event Listener to the buttons, so that they trigger a update of information, and re-render the templates.
+
+You can then disable/enable the buttons based on the number of prizes available.
+
+Glad you got started with the CSS too - we can also use a media query to make the site more mobile friendly.
